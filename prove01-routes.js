@@ -6,9 +6,16 @@ const routesHandler = (req, res) => {
     if (url === '/') {
         res.setHeader('Content-Type', 'text/html');
         res.write('<html>');
-        res.write('<head><title>My Awesome Page</title></head>');
+        res.write('<head>');
+        res.write('<title>My Awesome Page</title>');
+        res.write('<style>');
+        res.write('body { width: 600px; margin: 50 auto; font: 16px Arial, sans-serif; text-align: center; }');
+        res.write('input { height: 30px; width: 50%; margin: 10 auto}');
+        res.write('button { color: white; background-color: navy; border: none; display: block; height: 30px; width: 50%; margin: 0 auto; border-radius: 5px}')
+        res.write('</style>');
+        res.write('</head>');
         res.write('<body>');
-        res.write('<h1>This is my awesome website</h1>');
+        res.write('<h1>This is my awesome website!</h1>');
         res.write('<h2>Would you like to sign up?')
         res.write('<form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Sign Up</button></form>');
         res.write('</body>');
@@ -20,7 +27,13 @@ const routesHandler = (req, res) => {
         const users = usersData.split(',');
         res.setHeader('Content-Type', 'text/html');
         res.write('<html>');
-        res.write('<head><title>Users</title></head>');
+        res.write('<head>');
+        res.write('<title>My Awesome Page</title>');
+        res.write('<style>');
+        res.write('body { width: 600px; margin: 50 auto; font: 16px Arial, sans-serif; text-align: center; }');
+        res.write('li { list-style-type: none; margin: 5px 0');
+        res.write('</style>');
+        res.write('</head>');
         res.write('<body>');
         res.write('<h1>List of Users</h1>');
         res.write('<ul>');
