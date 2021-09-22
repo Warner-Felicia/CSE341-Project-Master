@@ -1,0 +1,45 @@
+#username {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.threeColumns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.formContainer {
+    width: 30%;
+    min-width: 300px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 25%;
+    min-width: 250px;
+    padding: 20px;
+    margin: auto;
+}
+
+.formContainer input {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.formContainer button {
+    border: none;
+    color: white;
+    background-color: #0065bd;
+    border-radius: 5px;
+    height: 30px;
+}

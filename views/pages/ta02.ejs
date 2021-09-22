@@ -3,21 +3,54 @@
 
 <head>
   <% include ../includes/header.ejs %>
+  <link rel='stylesheet' href='/stylesheets/ta02.css'>
 </head>
 
 <body>
   <% include ../includes/nav.ejs %>
-    <div class="jumbotron text-center">
-      <div class="container">
-        <h1>
-          <%= title %>
-        </h1>
-        <p>This is the placeholder for Team Activity 02</p>
-      </div>
+  <div class="jumbotron text-center">
+    <h1>
+      <%= title %>
+    </h1>
+  </div>
+  <div class='threeColumns'>
+    <div class="container formContainer">
+      <h2>Sign Up</h2>
+      <form action='/ta02/addUser' method='POST'>
+        <label for='username'>Enter your name</label>
+        <input type='text' name='username' id='username'>
+        <button type='submit'>Add User</button>
+      </form>
+      <% if (addError !== '') { %>
+      <p><%=addError %></p>
+      <% } %>
     </div>
-    <div class="container">
 
+    <div class='container formContainer'>
+      <h2>Users</h2>
+      <% if (users.length > 0) { %>
+      <ul class='users'>
+        <% for(let user of users) {%>
+        <li><%=user %></li>
+        <% } %>
+      </ul>
+      <% } else { %>
+      <p>No users found</p>
+      <% } %>
     </div>
+
+    <div class="container formContainer">
+      <h2>Unsign Up</h2>
+      <form action='/ta02/removeUser' method='POST'>
+        <label for='userRemove'>Enter name to remove</label>
+        <input type='text' name='userRemove' id='userRemove'>
+        <button type='submit'>Remove User</button>
+      </form>
+      <% if (removeError !== '') { %>
+      <p><%= removeError %></p>
+      <% } %>
+    </div>
+  </div>
 
 
 </body>
