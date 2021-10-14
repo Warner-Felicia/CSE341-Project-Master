@@ -1,0 +1,55 @@
+.dark{
+    background-color: rgb(46, 43, 43);
+}
+
+.red {
+   background-color:  rgb(128, 9, 9);
+}
+
+.green {
+    background-color:  rgb(5, 44, 5);
+} 
+
+.purple {
+    background-color:  rgb(128, 32, 128);
+}
+
+.dark-button {
+    color: rgb(46, 43, 43);
+    background-color: white;
+}
+
+.red-button {
+   color:  rgb(128, 9, 9);
+   background-color: white;
+}
+
+.green-button {
+    color:  rgb(5, 44, 5);
+    background-color: white;
+} 
+
+.purple-button {
+    color:  rgb(128, 32, 128);
+    background-color: white;
+}
+
+.counter-control {
+    display: flex;
+    justify-content: center;;
+}
+
+.counter-control-btn {
+    width: 20px;
+    color: black;
+    margin: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+.counter-control-counter {
+    width: 25%;
+    margin: 0;
+}
+
+

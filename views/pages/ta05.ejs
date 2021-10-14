@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../includes/header.ejs %>
+  <link rel='stylesheet' href='/stylesheets/ta05.css'>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+  <div class="jumbotron text-center <%=style %>">
+    <div class="container">
+      <h1>
+        <%= title %>
+      </h1>
+      <form action='/ta05/change-style' method='post'>
+        <button class='<%=style %>-button btn' type='submit'>Change Style</button>
+      </form>
+      <div class='counter-control'>
+        <form action='/ta05/counter' method='post'>
+          <button class='counter-control-btn btn' type='submit'>-</button>
+          <input type='hidden' name='action' value='minus'>
+        </form>
+        <p class='counter-control-counter'><%= counter %></p>
+        <form action='/ta05/counter' method='post'>
+          <button class='counter-control-btn btn' type='submit'>+</button>
+          <input type='hidden' name='action' value='plus'>
+        </form>
+      </div>
+      <a class='btn' href='/ta05/reset'>Reset</a>
+    </div>
+  </div>
+  <div class="container">
+
+  </div>
+
+
+</body>
+
+</html>
